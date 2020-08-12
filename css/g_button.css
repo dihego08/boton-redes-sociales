@@ -1,0 +1,28 @@
+.g_button-container{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 100001;
+}
+.g_button{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+.no_ver{
+    display: none;
+}
+.icon_g_button{
+    color: white;
+    font-size: 25px;
+    line-height: 50px;
+}
+.rotaras{
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+.rotaras:hover{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}

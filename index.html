@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Social Button</title>
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/g_button.css">
+</head>
+<body>
+	<div class="g_button-container">
+		<div class="g_button text-center no_rotaras no_ver" style="background-color: green;">
+	        <a href="#" target="_blank">
+	        	<i class="fa fa-whatsapp icon_g_button"></i>
+	        </a>
+	    </div>
+	    <div class="g_button text-center no_rotaras no_ver" style="background-color: blue;">
+	        <a href="#" target="_blank">
+	        	<i class="fa fa-facebook icon_g_button"></i>
+	        </a>
+	    </div>
+	    <div class="g_button text-center">
+	        <i class="fa fa-comments icon_g_button rotaras"></i>
+	        <i class="fa fa-times no_ver icon_g_button no_rotaras"></i>
+	    </div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var flag_button = false;
+    
+
+		    $( ".rotaras" ).mouseover(function() {
+
+		        if(flag_button == false){
+		            setTimeout(function() {
+		                $(".rotaras").addClass("no_ver");
+		                $(".no_rotaras").removeClass("no_ver");
+		            }, 1000);
+		            flag_button = false;
+		        }else{
+		            
+		        }
+		    }).mouseout(function() {
+		    });
+
+		    $(".no_rotaras").click(function(){
+		        $(".no_rotaras").addClass("no_ver");
+		        $(".rotaras").removeClass("no_ver");
+		        flag_button = true;
+		        setTimeout(function() {
+		            flag_button = false;
+		        }, 3000);
+		    });
+		});
+	</script>
+</body>
+</html>
